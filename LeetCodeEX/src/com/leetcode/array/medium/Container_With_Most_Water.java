@@ -3,7 +3,7 @@ package com.leetcode.array.medium;
 
 /**
  *
- * @author 吳思億
+ * @author AaronWU
  * @version 創建時間：2020年1月21日 下午5:48:08
  * @since JDK8.0
  */
