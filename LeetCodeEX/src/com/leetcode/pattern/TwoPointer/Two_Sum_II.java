@@ -34,10 +34,10 @@ public class Two_Sum_II {
 		Two_Sum_II test = new Two_Sum_II();
 		System.out.print("bruteForce:");
 		printnumbers(test.bruteForce(numbers, target));
-		
+
 		System.out.print("TwoPoint  :");
 		printnumbers(test.TwoPoint(numbers, target));
-		
+
 		System.out.print("hashMap   :");
 		printnumbers(test.hashMap(numbers, target));
 	}
@@ -51,7 +51,6 @@ public class Two_Sum_II {
 	 * @return
 	 */
 	public int[] hashMap(int[] numbers, int target) {
-
 		Map<Integer, Integer> map = new HashMap<>();
 		int[] ret = new int[2];
 		for (int i = 0; i < numbers.length; i++) {
@@ -62,7 +61,7 @@ public class Two_Sum_II {
 			}
 			map.put(numbers[i], i);
 		}
-		return ret;/* {1, 2, 3, 5, 6} */
+		return ret;
 	}
 
 	/**
