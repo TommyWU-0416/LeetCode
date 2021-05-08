@@ -4,11 +4,6 @@
 
 一組 element 可以是： 
 
-一個 pair
-3 個 element
-一個 subarray
-上面的幾個例子分別對應到
-
-一個 pair：#167
-3 個 element：#15
-一個 subarray：#713
+●一個 pair		=>	#167
+●3 個 element		=>	#15
+●一個 subarray	=>	#713
