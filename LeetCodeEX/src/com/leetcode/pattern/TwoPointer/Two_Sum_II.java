@@ -4,15 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * 167.https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+ * 
  * @author AaronWU
  * @version 創建時間：2021年5月8日 上午11:26:57
  * @since JDK8.0
  * 
- *        https://leetcode.com/problems/two-sum-ii-input-numbers-is-sorted/
- * 
+ *        只會有唯一組合的，不會像是 { 1, 2, 3, 4, 6 } 找出 5
  *        Example 1:
- * 
  *        Input: numbers = [2,7,11,15], target = 9
  *        Output: [1,2]
  *        Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 =
@@ -27,7 +26,7 @@ import java.util.Map;
  *        Output: [1,2]
  */
 public class Two_Sum_II {
-	private static int[] numbers = { 1, 2, 3, 5, 6 };
+	private static int[] numbers = { 2, 4, 5, 8 };
 	private static int target = 5;
 
 	public static void main(String[] args) {
@@ -52,16 +51,16 @@ public class Two_Sum_II {
 	 */
 	public int[] hashMap(int[] numbers, int target) {
 		Map<Integer, Integer> map = new HashMap<>();
-		int[] ret = new int[2];
+		int[] answer = new int[2];
 		for (int i = 0; i < numbers.length; i++) {
 			if (map.containsKey(target - numbers[i])) {
-				ret[0] = map.get(target - numbers[i]) + 1;
-				ret[1] = i + 1;
+				answer[0] = map.get(target - numbers[i]) + 1;
+				answer[1] = i + 1;
 				break;
 			}
 			map.put(numbers[i], i);
 		}
-		return ret;
+		return answer;
 	}
 
 	/**
