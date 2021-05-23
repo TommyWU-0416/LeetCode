@@ -27,7 +27,7 @@ import java.util.Collections;
  *        Output: 0
  */
 public class Minimum_Size_Subarray_Sum {
-	private static int[] nums = { 1,2,3,4 };
+	private static int[] nums = { 1,14,2,3,4 };
 	private static int target = 15;
 
 	public static void main(String[] args) {
