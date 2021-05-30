@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.pattern.NextGreaterElement;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -34,8 +34,8 @@ import java.util.Stack;
  * 
  */
 public class Next_Greater_Element_I {
-	private static int[] nums1 = { 4, 5 }, nums2 = { 6, 2, 1, 5, 4 };
-//	private static int[] nums1 = { 4, 1, 2 }, nums2 = { 1, 3, 4, 2 };
+//	private static int[] nums1 = { 4, 5 }, nums2 = { 6, 2, 1, 5, 4 };
+	private static int[] nums1 = { 4, 1, 2 }, nums2 = { 1, 3, 4, 2 };
 //	private static int[] nums1 = { 1, 3, 5, 2, 4 }, nums2 = { 6, 5, 4, 3, 2, 1, 7 };
 
 	public static void main(String[] args) {
@@ -45,21 +45,22 @@ public class Next_Greater_Element_I {
 	}
 
 	/**
-	 * Runtime	4 ms
-	 * Memory	38.9 MB
+	 * Runtime 4 ms
+	 * Memory 38.9 MB
 	 * time:O(n+m) space:O(1)
+	 * 
 	 * @param nums1
 	 * @param nums2
 	 * @return
 	 */
 	public int[] nextGreaterElement1(int[] nums1, int[] nums2) {
 		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-		
+
 		for (int i = 0; i < nums1.length; i++) {
-			map.put(nums1[i], i);
+			map.put(nums1[i], i);	/* [num, index] */
 		}
 		int[] result = new int[nums1.length];
-		Arrays.fill(result, -1);
+		Arrays.fill(result, -1);	/* 初始化陣列為 -1 */
 		Stack<Integer> stack = new Stack<Integer>();
 		for (int j = 0; j < nums2.length; j++) {
 			while (!stack.isEmpty() && stack.peek() < nums2[j]) {
@@ -110,16 +111,13 @@ public class Next_Greater_Element_I {
 						break;
 					}
 				}
-
 				count++;
 			}
 			/* 找到最後沒有就給-1 */
 			if (num_result[i] == 0) {
 				num_result[i] = -1;
 			}
-
 		}
-
 		return num_result;
 	}
 
