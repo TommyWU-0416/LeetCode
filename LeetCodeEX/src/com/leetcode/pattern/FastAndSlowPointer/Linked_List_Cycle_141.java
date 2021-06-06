@@ -26,7 +26,7 @@ public class Linked_List_Cycle_141 {
 	public static void main(String[] args) {
 		Linked_List_Cycle_141 test = new Linked_List_Cycle_141();
 		System.out.println("hasCycle_Brute:" + test.hasCycle_Brute(head));
-		System.out.println("hasCycle_Fast&SlowPointer:" + test.hasCycle_Brute(head));
+		System.out.println("hasCycle_FastAndSlowPointer:" + test.hasCycle_FastAndSlowPointer(head));
 	}
 
 	/**
