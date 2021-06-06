@@ -1,4 +1,4 @@
-package com.leetcode.pattern.fastandslowpointer;
+package com.leetcode.pattern.FastAndSlowPointer;
 
 /**
  * 876.https://leetcode.com/problems/middle-of-the-linked-list/
@@ -16,13 +16,13 @@ package com.leetcode.pattern.fastandslowpointer;
  * 
  * 
  */
-public class Middle_of_the_Linked_List {
+public class Middle_of_the_Linked_List_876 {
 
 	public static void main(String[] args) {
 		int[] array = { 1, 2, 3, 4, 5 };
 
 		ListNode listnode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
-		Middle_of_the_Linked_List test = new Middle_of_the_Linked_List();
+		Middle_of_the_Linked_List_876 test = new Middle_of_the_Linked_List_876();
 		ListNode res = test.middleNode(listnode);
 		System.out.println(res);
 	}

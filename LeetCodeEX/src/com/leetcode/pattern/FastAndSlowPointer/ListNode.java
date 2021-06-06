@@ -1,4 +1,4 @@
-package com.leetcode.pattern.fastandslowpointer;
+package com.leetcode.pattern.FastAndSlowPointer;
 
 /**
  *
