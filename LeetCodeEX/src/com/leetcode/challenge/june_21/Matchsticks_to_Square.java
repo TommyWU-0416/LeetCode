@@ -105,4 +105,54 @@ public class Matchsticks_to_Square {
 		}
 		return false;
 	}
+
+	/**
+	 * 將儲存的數字改成放boolean如果用過就放true
+	 * 
+	 * Runtime :3 ms, faster than 90.67%
+	 * Memory Usage : 38.4 MB, less than 15.36%
+	 * 
+	 * @param nums
+	 * @return
+	 */
+//	public boolean makesquare(int[] matchsticks) {
+//		if (matchsticks == null || matchsticks.length < 4)
+//			return false;
+//
+//		int perimeter = 0;
+//		for (int i = 0; i < matchsticks.length; i++) {
+//			perimeter += matchsticks[i];
+//		}
+//		if (perimeter % 4 != 0)
+//			return false; /* 非整數 */
+//		boolean[] used = new boolean[matchsticks.length];
+//		Arrays.sort(matchsticks);
+//
+//		return dfs(matchsticks, 0, 0, used, perimeter / 4);
+//	}
+//
+//	private boolean dfs(int[] nums, int currSum, int count, boolean[] used, int target) {
+//		if (currSum == target) {
+//			count++; // number of the length
+//			if (count == 3)
+//				return true;
+//			currSum = 0;
+//		}
+//		if (currSum > target)
+//			return false;
+//
+//		// backTracking method.
+//		for (int i = nums.length - 1; i >= 0; i--) {
+//			if (used[i])
+//				continue;
+//			if (currSum + nums[i] > target)
+//				break; // very important, since currSum <= edge, if currSum > edge, we need return
+//						// false
+//			used[i] = true;
+//			if (dfs(nums, currSum + nums[i], count, used, target))
+//				return true;
+//			used[i] = false;
+//		}
+//		return false;
+//	}
 }
